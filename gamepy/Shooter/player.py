@@ -40,6 +40,8 @@ class Player(animation.AnimateSprite):
         self.all_projectiles.add(Projectile(self))
         # start animation
         self.start_animation()
+        # play sound
+        self.game.sound_manager.play('tir')
 
         
     def move_right(self):
