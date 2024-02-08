@@ -19,7 +19,7 @@ class Comet(pygame.sprite.Sprite):
     def remove(self):
         self.comet_event.all_comets.remove(self)
         # play sound
-        self.comet_event.game.sound_manager.play('meteorite')
+        """self.comet_event.game.sound_manager.play('meteorite')"""
 
         # check there are not comets
         if len(self.comet_event.all_comets) == 0:
@@ -27,7 +27,7 @@ class Comet(pygame.sprite.Sprite):
             self.comet_event.reset_percent()
             # display monsters
             self.comet_event.game.start()
-             
+
 
     def fall(self):
         self.rect.y += self.velocity
@@ -40,7 +40,7 @@ class Comet(pygame.sprite.Sprite):
                  # refresh event bar
                  self.comet_event.reset_percent()
                  self.comet_event.fall_mode = False
-        
+
         if self.comet_event.game.check_collision(
             self, self.comet_event.game.all_players
             ):
@@ -50,4 +50,4 @@ class Comet(pygame.sprite.Sprite):
                 # damage player
                 self.comet_event.game.player.damage(20)
 
-            
+

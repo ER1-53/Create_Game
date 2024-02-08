@@ -6,7 +6,7 @@ class Projectile(pygame.sprite.Sprite):
 
     def __init__(self, player):
         super().__init__()
-        self.velocity = 2
+        self.velocity = 6
         self.player = player
         self.image = pygame.image.load('assets/projectile.png')
         self.image = pygame.transform.scale(self.image, (50, 50))
@@ -34,12 +34,12 @@ class Projectile(pygame.sprite.Sprite):
             # inflict damages
             monster.damage(self.player.attack)
 
-        # check if projectile left screen 
+        # check if projectile left screen
         if self.rect.x > 1080:
             #delete projectiles
             self.remove()
 
     def remove(self):
         self.player.all_projectiles.remove(self)
-        
+
 

@@ -28,7 +28,7 @@ class Player(animation.AnimateSprite):
             self.game.game_over()
 
     def update_animation(self):
-        self.animate()         
+        self.animate()
 
     def update_health_bar(self, surface):
         # draw life bar
@@ -41,9 +41,9 @@ class Player(animation.AnimateSprite):
         # start animation
         self.start_animation()
         # play sound
-        self.game.sound_manager.play('tir')
+        """self.game.sound_manager.play('tir')"""
 
-        
+
     def move_right(self):
         # move possible if there is no collision with monster
         if not self.game.check_collision(self, self.game.all_monsters):

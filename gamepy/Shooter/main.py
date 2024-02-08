@@ -7,7 +7,7 @@ pygame.init()
 
 # define a clock
 clock = pygame.time.Clock()
-FPS = 80
+FPS = 60
 
 # Dispay the screen
 pygame.display.set_caption('UniverSound')
@@ -59,7 +59,7 @@ while running:
             print("Game over")
             running = False
             pygame.quit()
-        
+
         # detect if the player drops a keyboard key
         elif event.type == pygame.KEYDOWN:
            game.pressed[event.key] = True
@@ -76,7 +76,7 @@ while running:
             if play_button_rect.collidepoint(event.pos):
                 game.start()
                 # play sound
-                game.sound_manager.play('ci')
+                """game.sound_manager.play('ci')"""
 
     # fix FPS on clock
     clock.tick(FPS)

@@ -1,4 +1,5 @@
 import pygame
+pygame.mixer.init()
 
 class SoundManager:
 
@@ -9,6 +10,6 @@ class SoundManager:
             'meteorite': pygame.mixer.Sound("assets/sounds/meteorite.ogg"),
             'tir': pygame.mixer.Sound("assets/sounds/tir.ogg"),
         }
-    
+
     def play(self, name):
         self.sounds[name].play()
